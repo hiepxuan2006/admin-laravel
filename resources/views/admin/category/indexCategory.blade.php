@@ -39,7 +39,7 @@
                                             {{-- <a href="{{ route('categories.delete', ['id' => $category->id]) }}"
                                                 class="btn btn-danger">Xóa</a> --}}
                                             <a data-target="#modal-confirm" data-id="{{ $category->id }}"
-                                                data-toggle="modal" type="button" class="btn btn-danger">Xóa</a>
+                                                data-toggle="modal" type="button" class="btn btn-danger accessDe">Xóa</a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -50,28 +50,12 @@
                     <div class="mx-auto">
                         {{ $categories->links('pagination::bootstrap-4') }}
                     </div>
-                    <div class="modal fade" id="modal-confirm" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Xóa sản phẩm ?</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    Bạn chắc chắn muốn xóa sản phẩm ?
-                                </div>
-                                <div class="modal-footer">
-                                    <a type="button" id="btn-delete-product" class="btn btn-danger">Xóa</a>
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Hủy</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+@endsection
+@section('js')
+    <script src="{{ asset('admins\user\index.js') }}"></script>
+    <script src="{{ asset('vendors\sweetalert\sweetalert2@11.js') }}"></script>
 @endsection
