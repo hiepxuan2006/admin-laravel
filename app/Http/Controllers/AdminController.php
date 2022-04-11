@@ -16,8 +16,10 @@ class AdminController extends Controller
     public function postLoginAdmin(Request $request)
     {
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            $user = Auth::user()->delete_at;
             return redirect(route('home'));
         }
+        return redirect(route('admin.loginAdmin'));
     }
     public function Logout(Request $request)
     {

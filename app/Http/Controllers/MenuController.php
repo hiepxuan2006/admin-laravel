@@ -6,11 +6,13 @@ use App\Components\MenuRecusive;
 use App\Components\Recusive;
 use Illuminate\Http\Request;
 use App\Models\Menu;
+use App\Traits\TraitsSoftDelete;
 use Illuminate\Support\Str;
 
 class MenuController extends Controller
 {
     private $menu;
+    use TraitsSoftDelete;
 
     public function __construct(Menu $menu)
     {
@@ -59,7 +61,6 @@ class MenuController extends Controller
     }
     public function del($id)
     {
-        $this->menu->find($id)->delete();
-        return redirect(route('menu.index'));
+        return $this->TraitsSoftDelete($id, $this->menu);
     }
 }

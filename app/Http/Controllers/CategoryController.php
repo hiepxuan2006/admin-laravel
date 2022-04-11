@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use App\Components\Recusive;
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Traits\TraitsSoftDelete;
 use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
     private $category;
+    use TraitsSoftDelete;
 
     public function __construct(Category $category)
     {
@@ -58,7 +60,6 @@ class CategoryController extends Controller
     }
     public function del($id)
     {
-        $this->category->find($id)->delete();
-        return redirect(route('categories.index'));
+        return $this->TraitsSoftDelete($id, $this->category);
     }
 }
