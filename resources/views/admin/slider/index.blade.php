@@ -38,7 +38,7 @@
                                         <th scope="row">{{ $slider->id }}</th>
                                         <td>{{ $slider->name }}</td>
                                         <td>{{ $slider->description }}</td>
-                                        <td><img class="imageProduct" src="{{ route('$slider->image_path') }}" alt=""></td>
+                                        <td><img class="imageProduct" src="{{ route($slider->image_path) }}" alt=""></td>
                                         <td>
                                             <a href="{{ route('slider.edit', ['id' => $slider->id]) }}"
                                                 class="btn btn-default" href="">Sửa</a>
