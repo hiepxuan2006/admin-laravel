@@ -55,3 +55,7 @@
         </div>
     </div>
 @endsection
+@section('js')
+    <script src="{{ asset('admins\user\index.js') }}"></script>
+    <script src="{{ asset('vendors\sweetalert\sweetalert2@11.js') }}"></script>
+@endsection
