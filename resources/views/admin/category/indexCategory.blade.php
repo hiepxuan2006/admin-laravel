@@ -36,10 +36,10 @@
                                         <td>
                                             <a href="{{ route('categories.edit', ['id' => $category->id]) }}"
                                                 class="btn btn-default">Sửa</a>
-                                            {{-- <a href="{{ route('categories.delete', ['id' => $category->id]) }}"
-                                                class="btn btn-danger">Xóa</a> --}}
-                                            <a data-target="#modal-confirm" data-id="{{ $category->id }}"
-                                                data-toggle="modal" type="button" class="btn btn-danger accessDe">Xóa</a>
+                                            <a data-url="{{ route('categories.delete', ['id' => $category->id]) }}"
+                                                class="btn btn-danger accessDel">Xóa</a>
+                                            {{-- <a data-target="#modal-confirm" data-id="{{ $category->id }}"
+                                                data-toggle="modal" type="button" class="btn btn-danger accessDe">Xóa</a> --}}
                                         </td>
                                     </tr>
                                 @endforeach
