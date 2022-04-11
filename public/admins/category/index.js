@@ -18,7 +18,8 @@ $('.accessDel').click(function (e) {
                 url: url,
                 success: function (response) {
                     if (response.code == 200) {
-                        that.parent().parent().remove()
+                        let clg = that.parent().parent().remove()
+                        console.log(clg)
                         Swal.fire(
                             'Deleted!',
                             'Your file has been deleted.',
