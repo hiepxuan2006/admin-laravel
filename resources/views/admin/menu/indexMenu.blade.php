@@ -33,9 +33,9 @@
                                         <th scope="row">{{ $menu->id }}</th>
                                         <td>{{ $menu->name }}</td>
                                         <td>
-                                            <a href="{{ route('menu.edit', ['id' => $category->id]) }}"
+                                            <a href="{{ route('menu.edit', ['id' => $menu->id]) }}"
                                                 class="btn btn-default">Sửa</a>
-                                            <a data-url="{{ route('menu.delete', ['id' => $category->id]) }}"
+                                            <a data-url="{{ route('menu.delete', ['id' => $menu->id]) }}"
                                                 class="btn btn-danger accessDel">Xóa</a>
                                             {{-- <a data-target="#modal-confirm" data-toggle="modal" type="button"
                                                 class="btn btn-danger">Xóa</a> --}}
