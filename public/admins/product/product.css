@@ -1,0 +1,10 @@
+.imageProduct{
+    width: 150px;
+    margin-top: 10px;
+    height: 100px;
+    object-fit: cover;
+}
+.alert-danger{
+    margin-top: 10px;
+    padding: 0.5rem 1rem;
+}
