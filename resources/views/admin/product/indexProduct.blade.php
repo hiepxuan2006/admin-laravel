@@ -41,7 +41,7 @@
                                         <td>{{ $productItem->name }}</td>
                                         <td>{{ number_format($productItem->price) }}</td>
                                         <td>
-                                            <img class="imageProduct" src="{{ $productItem->feature_image_path }}"
+                                            <img class="imageProduct" src="{{ asset('$productItem->feature_image_path') }}"
                                                 alt="">
                                         </td>
                                         <td>{{ $productItem->InsertCategoryComment->name ?? 'None' }}</td>
